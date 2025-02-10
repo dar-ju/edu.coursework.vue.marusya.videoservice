@@ -1,0 +1,218 @@
+:root {
+  --text_white: #FFFFFF;
+  --text_50white: rgb(255, 255, 255, 0.5);
+  --text_70white: rgb(255, 255, 255, 0.7);
+  --text_40black: rgba(0, 0, 0, 0.4);
+  --text_50black: rgba(0, 0, 0, 0.5);
+  --text_black: #000000;
+
+  --button_80white: rgb(255, 255, 255, 0.8);
+  --button_black: #000000;
+  --button_blue: #67A5EB;
+  --button_white: #FFFFFF;
+
+  --bckg_white: #FFFFFF;
+  --bckg_lite-black: #0A0B0B;
+  --bckg_lite-90black: #0A0B0BE5;
+  --bckg_lite-50black: #0A0B0B80;
+  --bckg_blue_main: #6A5DC2;
+  --bckg_blue_second: #B4A9FF;
+  --bckg_blue_dark: #45526E;
+  --bckg_grey: #393B3C;
+  --bckg_dark-grey: #333333;
+  --bckg_lite-grey-card: #616161;
+  --bckg_lite-grey-btn: #747474;
+  --bckg_gold: #A59400;
+  --bckg_green: #308E21;
+  --bckg_lite-grey: #777777;
+  --bckg_red: #C82020;
+  --bckg_54lite-grey: #FFFFFF54;
+  --bckg_50lite-grey: #FFFFFF50;
+  
+
+  --decor_white: #FFFFFF;
+  --decor_80white: #FFFFFF80;
+  --decor_50white: #FFFFFF50;
+  --decor_40black: rgba(0, 0, 0, 0.4);
+  --decor_red: #FF7575;
+  --decor_purple: #DC5DFC;
+  --decor_blue_second: #B4A9FF;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+input:active,
+input:focus {
+  border: none;
+  outline: none;
+}
+
+/* убираем крестик у инпута */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--bckg_blue_main);
+  background: linear-gradient(179deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%), linear-gradient(180deg, #000 0%, rgba(39, 36, 36, 0.70) 100%);
+  background-repeat: no-repeat;
+  font-family: "Play", "Open Sans", sans-serif;
+  font-weight: 400;
+  color: var(--text_white);
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text_white);
+}
+
+/* BUTTONS */
+.btn-reset {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 0;
+}
+
+.btn {
+  max-width: 100%;
+  padding: 16px 50px;
+  border-radius: 28px;
+  background-color: var(--button_blue);
+  color: var(--text_white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--button_blue);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--bckg_blue_dark);
+  color: var(--text_50white);
+}
+
+.btn-secondary {
+  background-color: var(--bckg_grey);
+  outline: 1px solid var(--decor_40black);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--bckg_lite-grey-btn);
+  color: var(--text_50white);
+}
+
+.btn-icons {
+  width: 68px;
+  height: 56px;
+  padding: 0;
+  background-color: var(--bckg_dark-grey);
+  outline: 1px solid var(--decor_40black);
+  font-size: 0;
+}
+
+.btn-icons:hover,
+.btn-icons:focus {
+  background-color: var(--bckg_lite-grey-btn);
+  color: var(--text_50white);
+}
+
+.btn-icons-fill {
+  fill: var(--button_white);
+  transition: color ease-in-out 0.3s;
+}
+
+.btn-icons-fill:hover, .btn-icons-fill:focus {
+  color: var(--decor_blue_second);
+}
+
+.btn-icons-social-fill {
+  color: var(--button_80white);
+  transition: color ease-in-out 0.3s;
+}
+
+.btn-icons-social-fill:hover {
+  color: var(--decor_blue_second);
+}
+
+.btn-icons-social-fill:focus {
+  color: var(--decor_blue_second);
+}
+
+/* SPINNER */
+.card-spinner {
+  position: absolute;
+  display: block;
+  min-width: 50px;
+  min-height: 50px;
+  top: 45%;
+  left: 45%;
+}
+
+
+/* MEDIA */
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+}
