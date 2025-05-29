@@ -44,9 +44,10 @@ onMounted(async () => {
 
 .genres__list {
   display: flex;
-  flex-wrap: wrap;
   row-gap: 64px;
   column-gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
